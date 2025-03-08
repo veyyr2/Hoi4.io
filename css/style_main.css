@@ -1,0 +1,416 @@
+/*подключить карточки*/
+@import url("cards/army/soldier_card.css");
+@import url("cards/army/artllery_card.css");
+@import url("cards/army/tnk_card.css");
+@import url("cards/army/rat_card.css");
+@import url("cards/army/fighter_card.css");
+@import url("cards/army/bom_card.css");
+@import url("cards/army/uwb_card.css");
+@import url("cards/army/des_card.css");
+
+/*подключить модальные окна*/
+@import url("modal_windows/inf_appear_window.css");
+@import url("modal_windows/art_appear_window.css");
+@import url("modal_windows/tnk_appear_window.css");
+@import url("modal_windows/rat_appear_window.css");
+@import url("modal_windows/fig_appear_window.css");
+@import url("modal_windows/bom_appear_window.css");
+@import url("modal_windows/uwb_appear_window.css");
+@import url("modal_windows/des_appear_window.css");
+
+/*переменные для автоматизации */
+:root {
+    --border-for-text: 1.4px; /*размер контура текста в кнопках управления*/
+
+    /*светлая тема*/
+    --bg-color: #DFC698;
+    --bg-div-color: #D9D9D9;
+    --text-color: black;
+    --border-color: silver;
+    --bg-color-body: white;
+    --bg-img-body: url("white_bg_2.jpg");
+}
+
+/*темная тема*/
+.dark-mode {
+    --bg-color: #282C34;
+    --bg-div-color: #474747;
+    --text-color: #F5F5F5;
+    --border-color: black;
+    --bg-color-body: rgb(49, 49, 49);
+    --bg-img-body: url("dark_bg.jpg");
+}
+
+body {
+    /*Для текста внутри body*/
+    color: var(--text-color);
+    /*задний цвет как резерв*/
+    background-color: var(--bg-color-body);
+    /*задние фотки*/
+    background-image: var(--bg-img-body);
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    cursor: url("cursor2.cur"), auto;
+}
+
+header{
+    background-color: #212121;
+    height: 80px;
+    /*line-height: 80px;*/
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    gap: 20px; /*расстояние между элементами*/
+    position: fixed;
+    z-index: 100;
+}
+
+/*для всех кнопок навигации */
+header button{
+    /*размер текста*/
+    font-size: 18px;
+    /*Контур для текста*/
+    text-shadow: 
+    calc(var(--border-for-text) * -1) calc(var(--border-for-text) * -1) 0 black,
+    var(--border-for-text)  calc(var(--border-for-text) * -1) 0 black,
+    calc(var(--border-for-text) * -1)  var(--border-for-text) 0 black,
+    var(--border-for-text)  var(--border-for-text) 0 black;
+    color: rgb(255, 255, 255);
+    background-color: #517051;
+    border-radius: 25% 25% 50%;
+    width: 180px;
+    height: 50px;
+}
+
+/*Для всех ссылок внутри кнопок*/
+header button a{
+    text-decoration: none; color: inherit;
+}
+
+/*при наведении на кнопки в хидере*/
+header button:hover {
+    background-color: #84A384;
+}
+
+/*при наведение на темную тему*/
+#theme-toggle:hover {
+    background-color: #84A384;
+}
+
+/*кнопка переключения темной темы*/
+#theme-toggle {
+    padding: 10px;
+    background-color: #517051;
+    border-radius: 100%;
+    border-color: black;
+    border: 2px solid black;
+}
+
+/*для main и aside*/
+.container {
+    display: flex;
+}
+
+main{
+    position: relative;
+    z-index: 1;
+    margin-top: 80px;
+    /*margin-right: 80px;*/
+    width: 50%;
+    height: fit-content;
+    margin-left: 5%;
+    border: 1px solid var(--border-color);
+    flex: 1;
+    padding: 20px;
+    background-color: var(--bg-color);
+    /*для списка блоков контента*/
+    display: flex;
+    flex-direction: column;
+}
+
+/*любой блок*/
+.block {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-div-color);
+    padding: 10px;
+}
+
+/*для всех заголовков внутри блока*/
+.zagolovok {
+    background-color: var(--bg-color); 
+    width: fit-content;
+    padding: 10px;
+    border: 4px solid rgba(33, 33, 33, 1);
+    border-radius: 25% 25%;
+    /*margin: 0 auto;*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+/*для любого подзаголовка внутри блока*/
+.podzagolovok {
+    background-color: var(--bg-color); 
+    width: fit-content;
+    padding: 10px;
+    border: 4px solid rgba(33, 33, 33, 1);
+    border-radius: 25% 25%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+/*картинки блока приветсвия*/
+#header_pictures{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+/*для картинок блока приветствия*/
+#header_pictures img{
+    width: 50%;
+}
+
+/*для любого текста*/
+.any_text {
+    font-size: 20px;
+}
+
+/*для карточек*/
+.card {
+    text-align: center;
+    width: 260px;
+    height: 360px;
+    border: 2px solid rgba(33, 33, 33, 1);
+    border-radius: 30px;
+    background-color: #517051;
+    padding-top: 15px;
+    position: relative;
+}
+
+/*для контейнера внутри карточки с картинками*/
+.img_container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    perspective: 1000px; /* Добавляем перспективу */
+}
+
+/*для заголовков внтури карточек*/
+.card h2 {
+    background-color: var(--bg-color); 
+    width: fit-content;
+    padding: 5px;
+    border: 2px solid rgba(33, 33, 33, 1);
+    border-radius: 10px;
+    margin: 0 auto;
+    position: relative;
+    top: 58%;
+}
+
+/*для описания внутри карточек*/
+.card p{
+    background-color: var(--bg-color); 
+    border: 2px solid rgba(33, 33, 33, 1);
+    margin: 0 auto;
+    width: 80%;
+    position: relative;
+    top: 60%;
+}
+
+/*для любой кнопки "подробнее" в карточках*/
+.card button{
+    float: right;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    background-color: var(--bg-color); 
+    padding: 3px;
+    border: 2px solid rgba(33, 33, 33, 1);
+    border-radius: 10px;
+    color: var(--text-color);
+}
+
+.card button:hover {
+    opacity: 0.9;
+}
+
+/*главный блок с мемами*/
+#meme {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/*для блоков внтури главного блока мемов*/
+#meme div {
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+/*для картинок внутри блоков в мемах*/
+#meme div img {
+    width: 40%;
+}
+
+/*для всех отцов карточек в лидерах*/
+.leader_div {
+    display: flex; gap: 30px;
+}
+
+/*Для карточек с лидерами*/
+.leader_card {
+    text-align: center;
+    width: 260px;
+    height: 360px;
+    border: 2px solid rgba(33, 33, 33, 1);
+    border-radius: 30px;
+    background-color: #517051;
+    padding-top: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*Для фото в карточек с лидерами*/
+.leader_card img {
+    width: 50%;
+    margin: 0 auto;
+}
+
+/*для заголовков внтури карточек лидеров*/
+.leader_card h2 {
+    background-color: var(--bg-color); 
+    text-align: center;
+    width: 70%;
+    padding: 5px;
+    border: 2px solid rgba(33, 33, 33, 1);
+    border-radius: 10px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*для описания внутри карточек*/
+.leader_card p{
+    background-color: var(--bg-color); 
+    border: 2px solid rgba(33, 33, 33, 1);
+    margin: 0 auto;
+    width: 80%;
+}
+
+/*высчитываем от main % по width и оставшуюся чать занимаем для aside*/
+aside{
+    margin-top: 80px;
+    width: 80px;
+}
+
+/*для кнопок выбора музыки*/
+aside button {
+    padding: 10px;
+    background-color: #517051;
+    border-radius: 20px;
+    border-color: black;
+    border: 2px solid black;
+    color: white;
+}
+
+aside h3 {
+    padding-bottom: 10px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+aside button:hover {
+    background-color: #84A384;
+}
+
+/*для кнопки музыки*/
+#mus_openModal {
+    padding: 10px;
+    background-color: #517051;
+    border-radius: 100%;
+    border-color: black;
+    border: 2px solid black;
+    position: fixed;
+    right: 20px;
+    top: 90px;
+    z-index: 100;
+}
+
+#mus_openModal:hover {
+    background-color: #84A384;
+}
+
+/*модальное окно музыки*/
+.mus_modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/*контент музыки окно*/
+.mus_modal-content {
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+footer{
+    background-color: #212121;
+    height: fit-content;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer h1 {
+    color: #D9D9D9;
+    margin-bottom: 10px;
+}
+
+/*иконки в футере*/
+#icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/*подсвечивать иконки*/
+footer a:hover {
+    opacity: 0.9;
+}
+
+/*источник картинка*/
+#hoi4_wiki {
+    float: right;
+    background-color: #DFC698;
+    border-radius: 20px;
+    padding: 5px;
+}
