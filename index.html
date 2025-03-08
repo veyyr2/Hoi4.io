@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOI4 Энциклопедия</title>
+    <link rel="stylesheet" href="css/style_main.css">
+    <link rel="icon" href="pictures/paradox-interactive.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!--header-->
+    <header class="nav_buttons"> 
+        <!--Кнопка для возращения на главный сайт с изображением-->
+        <a href="main.html" id="widder">
+            <img src="pictures/hoi4-icon.png" alt="HOI4" width="200px" height="90px"> 
+        </a>
+
+        <!--Buttons navigation-->
+        <a href="#welcome">
+            <button>
+                Приветствие
+            </button>
+        </a>
+        <a href="#news">
+            <button>
+                Последнее <br> обновление
+            </button>
+        </a> 
+        <a href="#army">
+            <button>
+                Основные <br> юниты
+            </button>
+        </a>   
+        <a href="#memes">
+            <button>
+                Мемы
+            </button>
+        </a>   
+        <a href="#leaders">
+            <button>
+                Лидеры
+            </button>
+        </a>
+        
+        <!--night theme picture-->
+        <div id="theme-toggle">
+            <img id="theme-icon" src="pictures/ai white.png" alt="темный тема" width="40px">
+        </div>
+    </header>
+    <!--header end-->
+
+    <!--здесь main и aside-->
+    <div class="container">
+        <main> 
+            <!--приветствие-->
+            <div class="block">
+                <a name="welcome"></a>
+                <div id="header_pictures">
+                    <img src="pictures/hoi4-photo.jpeg" alt="pic">
+                    <img src="pictures/hearts_of_iron_iv-7.jpg" alt="123">
+                </div>
+                <h1 class="podzagolovok">Добро пожаловать!</h1>
+                <p class="any_text">Добро пожаловать на энциклопедию по Hearts of Iron IV! Здесь вы найдете исчерпывающую 
+                информацию обо всех аспектах игры, от механики боя и экономики до 
+                политических идеологий и национальных фокусов. Мы стремимся предоставить 
+                игрокам самый полный и актуальный справочник по игре, который поможет им 
+                достичь победы в Hearts of Iron IV.</p>
+            </div>
+
+            <!--новость про последнее обновление-->
+            <div class="block" style="margin-top: 10px;">
+                <a name="news"></a>
+                <h1 class="zagolovok">➤Новость про последнее обновление</h1>
+                <video src="video/hoi_trailer.mp4" controls width="90%" style="position: relative; z-index: 1;" poster="video/video_poster.jpg"></video>
+                <h1 class="podzagolovok">Добавлено новое DLC "Götterdämmerung"</h1>
+                <p class="any_text">Постройте промышленную и исследовательскую базу, чтобы пережить величайший конфликт в мире 
+                    в Hearts of Iron IV: Götterdämmerung. В этом расширении игроки смогут написать новую историю 
+                    Германии, Австрии, Венгрии и Бельгии. Проводите новые захватывающие исследования и военные 
+                    возможности, открывая новые пути для создания разрушительного 
+                    нового оружия и впечатляющих рейдов на стратегические цели.
+                </p>
+                <p style="text-align: left; font-size: 24px; font-weight: 900;">DLC включает в себя:</p>
+                <!--Список обновлений-->
+                <ul style="text-align: left; padding-left: 20px; padding-top: 10px; line-height: 25px;">
+                    <!--1-->
+                    <li>
+                        <p >
+                        Более крупное дерево фокусов <b>Германии</b>: пересмотренные национальные фокусы и 
+                        альтернативные исторические пути для одной из самых популярных наций в Hearts of Iron IV. 
+                        Эти политические пути включают новый монархический контент, восстановленную демократическую 
+                        Германию и альтернативные фашистские милитаристские пути. 
+                        Больше событий, управляемых персонажами, добавляют колорита центральному игроку войны.
+                        </p>
+                    </li>
+                    <!--2-->
+                    <li>
+                        <b>Австрийское</b> дерево фокусов: новые альтернативные истории для Австрии, 
+                        свободной от немецкого контроля, а также контент для соседних стран, 
+                        которые когда-то были частью империи Габсбургов. 
+                        Реформируйте Австро-Венгерскую империю и создайте мощную, единую фракцию.
+                    </li>
+                    <!--3-->
+                    <li>
+                        Пересмотренное <b>Венгерское</b> дерево фокусов: Перестроить страну, 
+                        используя технологии для преодоления 
+                        нехватки рабочей силы. Включая пересмотренный исторический путь.
+                    </li>
+                    <!--4-->
+                    <li>
+                        <b>Бельгийское </b>дерево фокусов: Сопротивляйтесь или приветствуйте немецкое господство. 
+                        Используйте природные богатства Конго 
+                        и наращивайте потенциал для африканского правительства в изгнании.
+                    </li>
+                </ul>
+                <!--КОНЕЦ Список обновлений-->
+            </div>
+            <!--КОНЕЦ новость про последнее обновление-->
+
+            <!--Основные юниты-->
+            <div class="block" style="margin-top: 10px;">
+                <a name="army"></a>
+                <h1 class="zagolovok">➤Основные юниты</h1>
+                <!--ЛОРД карточек-->
+                <div style="display: flex; gap: 30px; flex-direction: column;">
+                    <!--папа карточек-->
+                    <div style="display: flex; gap: 30px;">
+                        <!--карточка пехоты-->
+                        <div class="card">
+                            <div class="img_container">
+                                <div id="inf_flip_box">
+                                    <img src="pictures/army/soldier.jpg" alt="" id="inf_front_img" style="z-index: 2;">
+                                    <img src="pictures/army/soldier_back.png" alt="" id="inf_back_img">
+                                </div>
+                            </div>
+                            <h2>Пехота</h2>
+                            <p>Стандартный юнит для всех стран</p>
+
+                            <!--Всплывающее окно с кнопкой-->
+                            <button id="openModal">Подробнее➤</button>
+                            <div class="modal" >
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <h2 style="margin-bottom: 20px;">Информация</h2>
+                                    <table width="80%" border="2px">
+                                        <!--ХП-->
+                                        <tr>
+                                            <td>
+                                                HP
+                                            </td>
+                                            <td style="color: green;">
+                                                +25
+                                            </td>
+                                        </tr>
+                                        <!--Организация-->
+                                        <tr>
+                                            <td>
+                                                Организация
+                                            </td>
+                                            <td>
+                                                60
+                                            </td>
+                                        </tr>
+                                        <!--Атака-->
+                                        <tr>
+                                            <td>
+                                                Атака
+                                            </td>
+                                            <td>
+                                                +3.0
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--КОНЕЦ карточка пехоты-->
+
+                        <!--карточка артиллерии-->
+                        <div class="card">
+                            <div class="img_container">
+                                <div id="art_flip_box">
+                                    <img src="pictures/army/artllery.jpg" alt="" id="art_front_img" style="z-index: 2;">
+                                    <img src="pictures/army/artllery_back.jpg" alt="" id="art_back_img">
+                                </div>
+                            </div>
+                            <h2>Артиллерия</h2>
+                            <p>Бог войны. <br> (нет)</p>
+
+                            <!--Всплывающее окно с кнопкой-->
+                            <button id="art_openModal">Подробнее➤</button>
+                            <div class="art_modal" >
+                                <div class="art_modal-content">
+                                    <span class="art_close">&times;</span>
+                                    <h2 style="margin-bottom: 20px;">Информация</h2>
+                                    <table width="80%" border="2px">
+                                        <!--ХП-->
+                                        <tr>
+                                            <td>
+                                                HP
+                                            </td>
+                                            <td style="color: green;">
+                                                +0.6
+                                            </td>
+                                        </tr>
+                                        <!--Организация-->
+                                        <tr>
+                                            <td>
+                                                Организация
+                                            </td>
+                                            <td>
+                                                0
+                                            </td>
+                                        </tr>
+                                        <!--Атака-->
+                                        <tr>
+                                            <td>
+                                                Атака
+                                            </td>
+                                            <td>
+                                                +25
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--КОНЕЦ карточка артиллерии-->
+
+                        <!--танк-->
+                        <div class="card">
+                            <div class="img_container">
+                                <div id="tnk_flip_box">
+                                    <img src="pictures/army/tigr.png" alt="" id="tnk_front_img" style="z-index: 2;">
+                                    <img src="pictures/army/tigr_back.png" alt="" id="tnk_back_img">
+                                </div>
+                            </div>
+                            <h2>Танк</h2>
+                            <p>Я бронированный. <br> (да)</p>
+
+                            <!--Всплывающее окно с кнопкой-->
+                            <button id="tnk_openModal">Подробнее➤</button>
+                            <div class="tnk_modal" >
+                                <div class="tnk_modal-content">
+                                    <span class="tnk_close">&times;</span>
+                                    <h2 style="margin-bottom: 20px;">Информация</h2>
+                                    <table width="80%" border="2px">
+                                        <!--ХП-->
+                                        <tr>
+                                            <td>
+                                                HP
+                                            </td>
+                                            <td style="color: green;">
+                                                +2.0
+                                            </td>
+                                        </tr>
+                                        <!--Организация-->
+                                        <tr>
+                                            <td>
+                                                Организация
+                                            </td>
+                                            <td>
+                                                10
+                                            </td>
+                                        </tr>
+                                        <!--Атака-->
+                                        <tr>
+                                            <td>
+                                                Атака
+                                            </td>
+                                            <td>
+                                                +19
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--КОНЕЦ танк-->
+
+                        <!--Ratte-->
+                        <div class="card">
+                            <div class="img_container">
+                                <div id="rat_flip_box">
+                                    <img src="pictures/army/ratte.jpg" alt="" id="rat_front_img" style="z-index: 2;">
+                                    <img src="pictures/army/ratte_back.png" alt="" id="rat_back_img">
+                                </div>
+                            </div>
+                            <h2>Ratte</h2>
+                            <p>А я колоссальный. <br> (Бертольд)</p>
+
+                            <!--Всплывающее окно с кнопкой-->
+                            <button id="rat_openModal">Подробнее➤</button>
+                            <div class="rat_modal" >
+                                <div class="rat_modal-content">
+                                    <span class="rat_close">&times;</span>
+                                    <h2 style="margin-bottom: 20px;">Информация</h2>
+                                    <table width="80%" border="2px">
+                                        <!--ХП-->
+                                        <tr>
+                                            <td>
+                                                HP
+                                            </td>
+                                            <td style="color: green;">
+                                                +15
+                                            </td>
+                                        </tr>
+                                        <!--Организация-->
+                                        <tr>
+                                            <td>
+                                                Организация
+                                            </td>
+                                            <td>
+                                                60
+                                            </td>
+                                        </tr>
+                                        <!--Атака-->
+                                        <tr>
+                                            <td>
+                                                Атака
+                                            </td>
+                                            <td>
+                                                +80
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--КОНЕЦ Ratte-->
+                    </div>
+                    <!--КОНЕЦ папа карточек-->
+
+                    <!--папа карточек 2-->
+                    <div style="display: flex; gap: 30px;">
+                        <!--карточка истребитель-->
+                        <div class="card">
+                            <div class="img_container">
+                                <div id="fig_flip_box">
+                                    <img src="pictures/army/fighter.jpg" alt="" id="fig_front_img" style="z-index: 2;">
+                                    <img src="pictures/army/fighter_back.gif" alt="" id="fig_back_img">
+                                </div>
+                            </div>
+                            <h2>Истребитель</h2>
+                            <p>Боты любят спамить этим. <br> AA-guns справятся с этим.</p>
+
+                            <!--Всплывающее окно с кнопкой-->
+                            <button id="fig_openModal">Подробнее➤</button>
+                            <div class="fig_modal" >
+                                <div class="fig_modal-content">
+                                    <span class="fig_close">&times;</span>
+                                    <h2 style="margin-bottom: 20px;">Информация</h2>
+                                    <table width="80%" border="2px">
+                                        <!--Воздушная защита-->
+                                        <tr>
+                                            <td>
+                                                Воздушная защита
+                                            </td>
+                                            <td>
+                                                7
+                                            </td>
+                                        </tr>
+                                        <!--Скорость-->
+                                        <tr>
+                                            <td>
+                                                Скорость
+                                            </td>
+                                            <td>
+                                                400 км/ч
+                                            </td>
+                                        </tr>
+                                        <!--Дальность-->
+                                        <tr>
+                                            <td>
+                                                Дальность
+                                            </td>
+                                            <td>
+                                                400 км
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--КОНЕЦ истребитель-->
+
+                        <!--карточка бомбер-->
+                        <div class="card">
+                            <div class="img_container">
+                                <div id="bom_flip_box">
+                                    <img src="pictures/army/bomber.jpg" alt="" id="bom_front_img" style="z-index: 2;">
+                                    <img src="pictures/army/bomber_back.gif" alt="" id="bom_back_img" style="border: 2px solid black; backface-visibility: hidden;">
+                                </div>
+                            </div>
+                            <h2>Бомбардировщик</h2>
+                            <p>Казахстан угрожает нам бомбардировкой.</p>
+
+                            <!--Всплывающее окно с кнопкой-->
+                            <button id="bom_openModal">Подробнее➤</button>
+                            <div class="bom_modal" >
+                                <div class="bom_modal-content">
+                                    <span class="bom_close">&times;</span>
+                                    <h2 style="margin-bottom: 20px;">Информация</h2>
+                                    <table width="80%" border="2px">
+                                        <!--Воздушная защита-->
+                                        <tr>
+                                            <td>
+                                                Воздушная защита
+                                            </td>
+                                            <td>
+                                                25
+                                            </td>
+                                        </tr>
+                                        <!--Скорость-->
+                                        <tr>
+                                            <td>
+                                                Скорость
+                                            </td>
+                                            <td>
+                                                225 км/ч
+                                            </td>
+                                        </tr>
+                                        <!--Дальность-->
+                                        <tr>
+                                            <td>
+                                                Дальность
+                                            </td>
+                                            <td>
+                                                1500 км
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--КОНЕЦ бомбер-->
+
+                        <!--подводная лодка-->
+                        <div class="card">
+                            <div class="img_container">
+                                <div id="uwb_flip_box">
+                                    <img src="pictures/army/submarine.jpg" alt="" id="uwb_front_img" style="z-index: 2;">
+                                    <img src="pictures/army/submarine_back.png" alt="" id="uwb_back_img">
+                                </div>
+                            </div>
+                            <h2>Подводная лодка</h2>
+                            <p>Гроза всех конвоев. <br> (Этим нужно спамить)</p>
+
+                            <!--Всплывающее окно с кнопкой-->
+                            <button id="uwb_openModal">Подробнее➤</button>
+                            <div class="uwb_modal" >
+                                <div class="uwb_modal-content">
+                                    <span class="uwb_close">&times;</span>
+                                    <h2 style="margin-bottom: 20px;">Информация</h2>
+                                    <table width="80%" border="2px">
+                                        <!--ХП-->
+                                        <tr>
+                                            <td>
+                                                HP
+                                            </td>
+                                            <td style="color: green;">
+                                                +50
+                                            </td>
+                                        </tr>
+                                        <!--Радиус-->
+                                        <tr>
+                                            <td>
+                                                Радиус
+                                            </td>
+                                            <td>
+                                                6
+                                            </td>
+                                        </tr>
+                                        <!--Атака-->
+                                        <tr>
+                                            <td>
+                                                Торпедная атака
+                                            </td>
+                                            <td>
+                                                +6
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--КОНЕЦ подводная лодка-->
+
+                        <!--destroyer-->
+                        <div class="card">
+                            <div class="img_container">
+                                <div id="des_flip_box">
+                                    <img src="pictures/army/destroyer.jpg" alt="" id="des_front_img" style="z-index: 2;">
+                                    <img src="pictures/army/destroyer_back.gif" alt="" id="des_back_img">
+                                </div>
+                            </div>
+                            <h2>Эсминец</h2>
+                            <p>Гроза всех подводных лодок <br> (Важный корабль)</p>
+
+                            <!--Всплывающее окно с кнопкой-->
+                            <button id="des_openModal">Подробнее➤</button>
+                            <div class="des_modal" >
+                                <div class="des_modal-content">
+                                    <span class="des_close">&times;</span>
+                                    <h2 style="margin-bottom: 20px;">Информация</h2>
+                                    <table width="80%" border="2px">
+                                        <!--ХП-->
+                                        <tr>
+                                            <td>
+                                                HP
+                                            </td>
+                                            <td style="color: green;">
+                                                +80
+                                            </td>
+                                        </tr>
+                                        <!--Радиус-->
+                                        <tr>
+                                            <td>
+                                                Радиус
+                                            </td>
+                                            <td>
+                                                14
+                                            </td>
+                                        </tr>
+                                        <!--Атака-->
+                                        <tr>
+                                            <td>
+                                                Торпедная атака
+                                            </td>
+                                            <td>
+                                                +3
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--КОНЕЦ destroyer-->
+                    </div>
+                    <!--КОНЕЦ папа карточек 2-->
+                </div>
+                <!--КОНЕЦ ЛОРД карточек-->
+
+            </div>
+            <!--КОНЕЦ Основные юниты-->
+
+            <!--Мемы-->
+            <div class="block" style="margin-top: 10px; z-index: -1;">
+                <a name="memes"></a>
+                <h1 class="zagolovok">➤Мемы</h1>
+                <br>
+                <div id="meme">
+                    <div>
+                        <img src="pictures/memes/meme1.jpg" alt="">
+                        <img src="pictures/memes/meme2.png" alt="">
+                    </div>
+                    <div>
+                        <img src="pictures/memes/meme3.jpg" alt="">
+                        <img src="pictures/memes/meme4.jpg" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+            <!--КОНЕЦ Мемы-->
+
+            <!--Лидеры-->
+            <div class="block" style="margin-top: 10px; z-index: -1;">
+                <a name="leaders"></a>
+                <h1 class="zagolovok">➤Лидеры</h1>
+                <!--Лорд карточек-->
+                <div style="display: flex; gap: 30px; flex-direction: column;">
+                    <!--папа карточек-->
+                    <div class="leader_div">
+                        <!--Карточка художника-->
+                        <div class="leader_card">
+                            <img src="pictures/leaders/painter.png" alt="">
+                            <h2>Художник</h2>
+                            <p>Все знают, что он большой негодяй. <br>Тем не менее...</p>
+                        </div>
+                        <!--КОНЕЦ Карточка художника-->
+
+                        <!--Карточка Сталина-->
+                        <div class="leader_card">
+                            <img src="pictures/leaders/stalin.png" alt="">
+                            <h2>Иосиф Сталин</h2>
+                            <p>Тот самый усач с трубкой, который грузин. <br> Иногда проявляет свою паранойю и, обычно, после неё никто долго не живёт.</p>
+                        </div>
+                        <!--КОНЕЦ Карточка Сталина-->
+
+                        <!--Карточка Хирохито-->
+                        <div class="leader_card">
+                            <img src="pictures/leaders/hirohito.png" alt="">
+                            <h2>Хирохито</h2>
+                            <p>Этот бро ещё не знает чем станет Япония в 21 веке.</p>
+                        </div>
+                        <!--КОНЕЦ Карточка Хирохито-->
+
+                        <!--Карточка Черчилль-->
+                        <div class="leader_card">
+                            <img src="pictures/leaders/chechila.png" alt="">
+                            <h2>Уинстон Черчилль</h2>
+                            <p>Даже не думал, что он настолько любит сигареты "Winston", что назовёт себя в их честь</p>
+                        </div>
+                        <!--КОНЕЦ Карточка Черчилль-->
+                    </div>
+                    <!--папа карточек 2-->
+                    <div class="leader_div">
+                        <!--Карточка лысого-->
+                        <div class="leader_card">
+                            <img src="pictures/leaders/baldy.png" alt="">
+                            <h2>Бенито Муссолини</h2>
+                            <p>Шо ты лысый плаки плаки. <br> (Он реально лысый)</p>
+                        </div>
+                        <!--КОНЕЦ Карточка лысого-->
+
+                        <!--Карточка Петена-->
+                        <div class="leader_card">
+                            <img src="pictures/leaders/peten.png" alt="">
+                            <h2>Петен</h2>
+                            <p>Любит круассаны, <br> а также багеты, как и все французы.</p>
+                        </div>
+                        <!--КОНЕЦ Карточка Петена-->
+
+                        <!--Карточка Мао-->
+                        <div class="leader_card">
+                            <img src="pictures/leaders/mao.jpg" alt="">
+                            <h2>Мао Цзэдун</h2>
+                            <p>За то, что я его сюда добавил <br> мне начисляется +1000 социального кредита</p>
+                        </div>
+                        <!--КОНЕЦ Карточка Мао-->
+
+                        <!--Карточка Минор-->
+                        <div class="leader_card">
+                            <img src="pictures/leaders/minor.png" alt="">
+                            <h2>Минор))</h2>
+                            <p>Минорный минор минорно минорен!</p>
+                        </div>
+                        <!--КОНЕЦ Карточка Минор-->
+                    </div>
+                </div>
+                
+            </div>
+            <!--КОНЕЦ Лидеры-->
+        </main>
+        <!--end of main-->
+
+        <!--aside-->
+        <aside>
+            <!--Кнопка для включения музыки-->
+            <button id="mus_openModal">
+                <img src="pictures/icons/note.png" alt="" width="20px">
+            </button>
+
+            <!--Модальное окно выбора музыки-->
+            <div id="mus_modal" class="mus_modal">
+                <div class="mus_modal-content">
+                    <audio id="mainAudio" controls></audio>
+                    <span id="mus_closeModal" style="font-size: 50px;">&times;</span>
+                    <h3>Выберите аудиофайл</h3>
+                    <button class="select-audio" data-src="Allies_peace_morningofdday.ogg">Музыка 1</button>
+                    <button class="select-audio" data-src="Axistheme.ogg">Музыка 2</button>
+                </div>
+              </div>
+        </aside>
+        <!--END aside-->
+    </div>
+
+    <!--пятки-->
+    <footer>  
+        <!--Левая часть-->
+        <div class="footer_div">
+            <h1>Мои контакты:</h1>
+            <div id="icons" >
+                <a href="https://www.instagram.com/veyyr_2?igsh=MXM3aW5ydWs4bXBoZA==" target="_blank">
+                    <img src="pictures/icons/instagram.png" alt="" width="50px">
+                </a>
+                <a href="https://www.facebook.com/dmitrii.polska" target="_blank">
+                    <img src="pictures/icons/facebook.png" alt="" width="50px">
+                </a>
+                <a href="https://www.youtube.com/@Dmitry_23" target="_blank">
+                    <img src="pictures/icons/youtube.png" alt="" width="50px">
+                </a>
+            </div>
+        </div>
+
+        <!--Правая часть-->
+        <div class="footer_div">
+            <h1>Источник:</h1>
+            <a href="https://hoi4.paradoxwikis.com/Hearts_of_Iron_4_Wiki" target="_blank">
+                <img src="pictures/icons/source_hoi4_wiki.png" alt="" id="hoi4_wiki">
+            </a>
+        </div>
+    </footer>
+
+    <!--Модальные окна-->
+    <script src = "js/appear_window_java/inf_appear_window.js">  </script>
+    <script src = "js/appear_window_java/art_appear_window.js">  </script>
+    <script src = "js/appear_window_java/tnk_appear_window.js">  </script>
+    <script src = "js/appear_window_java/rat_appear_window.js">  </script>
+    <script src = "js/appear_window_java/fig_appear_window.js">  </script>
+    <script src = "js/appear_window_java/bom_appear_window.js">  </script>
+    <script src = "js/appear_window_java/uwb_appear_window.js">  </script>
+    <script src = "js/appear_window_java/des_appear_window.js">  </script>
+    <!--Темная тема-->
+    <script src="js/night_theme.js"></script>
+    <!--Включить музыку-->
+    <script src="js/music.js"></script>
+</body>
+</html>
